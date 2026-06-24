@@ -3,12 +3,13 @@ name: Build and Push Custom Stirling-PDF
 on:
   push:
     branches:
-      - pdf/barru # Pemicu otomatis setiap ada push ke branch ini
+      - pdf/barru
   workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  # WAJIB HURUF KECIL SEMUA DI BAWAH INI
+  IMAGE_NAME: barrukurniawan/stirling-pdf
 
 jobs:
   build-and-push:
@@ -35,7 +36,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          file: docker/embedded/Dockerfile # Menunjuk Dockerfile yang tepat
+          file: docker/embedded/Dockerfile
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
           cache-from: type=gha
