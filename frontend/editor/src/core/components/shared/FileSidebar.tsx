@@ -1126,65 +1126,6 @@ const FileSidebar = forwardRef<HTMLDivElement, FileSidebarProps>(
           onConfirm={handleConfirmSidebarDelete}
         />
 
-        {/* Bottom bar: user name + settings */}
-        <Tooltip
-          label={
-            onOpenSettings
-              ? `${displayName} - ${t("fileSidebar.openSettings", "Open settings")}`
-              : displayName
-          }
-          position="right"
-          withinPortal
-          disabled={!collapsed}
-        >
-          <div
-            className="file-sidebar-bottom-bar"
-            onClick={onOpenSettings}
-            role={onOpenSettings ? "button" : undefined}
-            tabIndex={onOpenSettings ? 0 : undefined}
-            onKeyDown={
-              onOpenSettings
-                ? (e) => e.key === "Enter" && onOpenSettings()
-                : undefined
-            }
-            data-testid={onOpenSettings ? "config-button" : undefined}
-            data-tour={onOpenSettings ? "config-button" : undefined}
-            aria-label={
-              onOpenSettings
-                ? t("fileSidebar.openSettings", "Open settings")
-                : displayName
-            }
-            style={onOpenSettings ? { cursor: "pointer" } : undefined}
-          >
-            <div
-              className={`file-sidebar-bottom-avatar${
-                showProfilePicture ? " file-sidebar-bottom-avatar--picture" : ""
-              }`}
-              aria-label={displayName}
-            >
-              {showProfilePicture ? (
-                <img
-                  src={profilePictureUrl}
-                  alt=""
-                  className="file-sidebar-bottom-avatar-img"
-                  onError={() => setPictureFailed(true)}
-                />
-              ) : (
-                displayName.charAt(0).toUpperCase()
-              )}
-            </div>
-            {!collapsed && (
-              <span className="file-sidebar-bottom-name sidebar-content-fade">
-                {displayName}
-              </span>
-            )}
-            {onOpenSettings && !collapsed && (
-              <div className="file-sidebar-bottom-settings">
-                <SettingsIcon sx={{ fontSize: "1.1rem" }} />
-              </div>
-            )}
-          </div>
-        </Tooltip>
       </div>
     );
   },

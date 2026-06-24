@@ -340,30 +340,6 @@ const UpgradeBanner: React.FC = () => {
 
   return (
     <>
-      {friendlyVisible && (
-        <InfoBanner
-          icon="stars-rounded"
-          title={t("upgradeBanner.title", "Upgrade to Server Plan")}
-          message={t(
-            "upgradeBanner.message",
-            "Get the most out of Stirling PDF with unlimited users and advanced features.",
-          )}
-          buttonText={t("upgradeBanner.upgradeButton", "Upgrade Now")}
-          buttonIcon="upgrade-rounded"
-          onButtonClick={handleUpgrade}
-          onDismiss={handleFriendlyDismiss}
-          show={friendlyVisible}
-          background="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
-          borderColor="transparent"
-          textColor="#fff"
-          iconColor="#fff"
-          closeIconColor="#fff"
-          buttonVariant="white"
-          buttonColor="blue"
-          minHeight={48}
-          compact
-        />
-      )}
       {renderUrgentBanner()}
     </>
   );

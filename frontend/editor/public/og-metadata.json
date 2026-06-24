@@ -242,8 +242,8 @@
     },
     "showJS": {
       "image": "/og_images/show-javascript.png",
-      "title": "Show JavaScript - Stirling PDF",
-      "description": "Extract and display JavaScript code from PDF documents"
+      "title": "Show JS - Stirling PDF",
+      "description": "The Free Adobe Acrobat alternative (10M+ Downloads)"
     },
     "bookletImposition": {
       "image": "/og_images/booklet-imposition.png",
@@ -277,23 +277,23 @@
     },
     "devApi": {
       "image": "/og_images/dev-api.png",
-      "title": "API - Stirling PDF",
-      "description": "Link to API documentation"
+      "title": "Dev Api - Stirling PDF",
+      "description": "The Free Adobe Acrobat alternative (10M+ Downloads)"
     },
     "devFolderScanning": {
       "image": "/og_images/dev-folder-scanning.png",
-      "title": "Automated Folder Scanning - Stirling PDF",
-      "description": "Link to automated folder scanning guide"
+      "title": "Dev Folder Scanning - Stirling PDF",
+      "description": "The Free Adobe Acrobat alternative (10M+ Downloads)"
     },
     "devSsoGuide": {
       "image": "/og_images/dev-sso-guide.png",
-      "title": "SSO Guide - Stirling PDF",
-      "description": "Link to SSO guide"
+      "title": "Dev Sso Guide - Stirling PDF",
+      "description": "The Free Adobe Acrobat alternative (10M+ Downloads)"
     },
     "devAirgapped": {
       "image": "/og_images/dev-airgapped.png",
-      "title": "Air-gapped Setup - Stirling PDF",
-      "description": "Link to air-gapped setup guide"
+      "title": "Dev Airgapped - Stirling PDF",
+      "description": "The Free Adobe Acrobat alternative (10M+ Downloads)"
     },
     "/login": {
       "image": "/og_images/home.png",

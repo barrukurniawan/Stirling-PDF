@@ -7,9 +7,11 @@ import HomePage from "@app/pages/HomePage";
 import Login from "@app/routes/Login";
 import GuestUserBanner from "@app/components/auth/GuestUserBanner";
 import { TeamInvitationBanner } from "@app/components/shared/TeamInvitationBanner";
+import { useAppConfig } from "@app/contexts/AppConfigContext";
 
 export default function Landing() {
   const { session, loading } = useAuth();
+  const { config } = useAppConfig();
   const { isAutoAuthenticating, autoAuthError, shouldTriggerAutoAuth } =
     useAutoAnonymousAuth();
   const location = useLocation();
@@ -81,6 +83,17 @@ export default function Landing() {
   if (autoAuthError && shouldTriggerAutoAuth) {
     return (
       <Navigate to="/login" replace state={{ autoAuthError, from: location }} />
+    );
+  }
+
+  // If login is disabled by config, always show the app
+  if (config?.enableLogin === false) {
+    return (
+      <>
+        <GuestUserBanner />
+        <TeamInvitationBanner />
+        <HomePage />
+      </>
     );
   }
 
