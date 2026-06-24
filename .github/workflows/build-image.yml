@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - pdf/barru # Pemicu otomatis setiap ada push ke branch ini
+  workflow_dispatch:
 
 env:
   REGISTRY: ghcr.io
